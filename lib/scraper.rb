@@ -2,8 +2,8 @@ require 'open-uri'
 require 'pry'
 
 class Scraper
-
   def self.scrape_index_page(index_url)
+<<<<<<< HEAD
     doc = Nokogiri::HTML(open(index_url))
     students = []
     doc.css("div.roster-cards-container").each do |card|
@@ -49,6 +49,14 @@ class Scraper
     student[:bio] = profile_page.css("div.bio-content.content-holder div.description-holder p").text if profile_page.css("div.bio-content.content-holder div.description-holder p")
 
     student
+=======
+
+  end
+  
+  
+  def self.scrape_profile_page(profile_url)
+    
+>>>>>>> 0ae2861ea7079051b3c6cef7ac6f7a0ffb0e74fa
   end
 
 
